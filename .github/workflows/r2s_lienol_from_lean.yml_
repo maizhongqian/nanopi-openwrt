@@ -14,7 +14,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    if: github.repository == 'klever1988/nanopi-openwrt'
+    if: github.repository == 'maizhongqian/nanopi-openwrt'
 
     steps:
 
@@ -104,6 +104,9 @@ jobs:
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y
           CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-zerotier=y
+          CONFIG_PACKAGE_kmod-pptp=y
+          CONFIG_PACKAGE_ppp-mod-pptp=y
+          CONFIG_PACKAGE_luci-proto-ppp=y
           # CONFIG_PACKAGE_luci-app-accesscontrol is not set
           # CONFIG_PACKAGE_luci-app-nlbwmon is not set
           # CONFIG_PACKAGE_luci-app-pppoe-relay is not set
